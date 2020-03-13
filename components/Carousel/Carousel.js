@@ -28,6 +28,7 @@ function createCarousel(){
   leftButton.textContent = "<";
   const mountains = document.createElement("img");
   mountains.src = "./assets/carousel/mountains.jpeg";
+  mountains.classList.add("current-img");
   const computer = document.createElement("img");
   computer.src = "./assets/carousel/computer.jpeg";
   const trees = document.createElement("img");
@@ -38,6 +39,19 @@ function createCarousel(){
   rightButton.classList.add('right-button');
   rightButton.textContent = ">";
 
+  rightButton.addEventListener('click', e => {
+    const currentImage = document.querySelector(".current-img");
+    const nextImage = currentImage.nextElementSibling;
+    currentImage.classList.remove("current-img");
+    nextImage.classList.add("current-img");
+
+  })
+  leftButton.addEventListener('click', e => {
+    const currentImage = document.querySelector(".current-img");
+    const previousImage = currentImage.previousElementSibling;
+    currentImage.classList.remove("current-img");
+    previousImage.classList.add("current-img");
+})
   carouselDiv.append(leftButton, mountains, computer, trees, turntable, rightButton);
 return carouselDiv;
 }

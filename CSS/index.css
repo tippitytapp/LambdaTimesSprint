@@ -260,6 +260,7 @@ body {
   flex-direction: row;
   height: 500px;
   position: relative;
+  overflow: hidden;
   margin-top: 16px;
 }
 @media (min-width: 1200px) {
@@ -300,4 +301,9 @@ body {
 }
 .carousel img {
   width: 100%;
+  display: none;
+}
+.carousel .current-img {
+  width: 100%;
+  display: block;
 }
