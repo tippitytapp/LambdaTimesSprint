@@ -15,7 +15,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     const topicsParent = document.querySelector(".topics");
     topicsArray.forEach(item => {
         topicsParent.append(createTopicTab(item))
-        console.log(topicsParent);
+        // console.log(topicsParent);
     })
 })
 .catch(err => {
